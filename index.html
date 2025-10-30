@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Inno Yudh 2K25 — 24h Hackathon</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; scroll-behavior: smooth; }
@@ -21,23 +21,23 @@
 
     :root {
       --primary: #1a73e8;
-      --dark: #1c1c1c;    /* Darkest (for header) */
-      --dark-nav: #2a2a2a; /* Lighter dark for nav */
+      --dark: #1c1c1c;
+      --dark-nav: #2a2a2a;
       --light: #ffffff;
       --text-dark: #202124;
       --text-light: #5f6368;
     }
 
     header {
-        background: var(--dark);
-        color: var(--light);
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 20px 50px;
-        position: relative;
-        z-index: 1000;
+      background: var(--dark);
+      color: var(--light);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px 30px; /* reduced from 50px */
+      position: relative;
+      z-index: 1000;
     }
 
     .nsrit-logo-block {
@@ -52,7 +52,7 @@
       width: 180px;
       height: auto;
       object-fit: contain;
-      mix-blend-mode: screen; 
+      mix-blend-mode: screen;
       opacity: 0.9;
     }
     .nsrit-logo-block p {
@@ -63,9 +63,9 @@
     }
 
     .college-info {
-        flex-grow: 1;
-        flex-shrink: 1; 
-        text-align: left;
+      flex-grow: 1;
+      flex-shrink: 1;
+      text-align: left;
     }
     .college-name {
       font-size: 28px;
@@ -83,8 +83,8 @@
     }
 
     nav {
-      background: var(--dark-nav); 
-      padding: 15px 50px;
+      background: var(--dark-nav);
+      padding: 15px 30px; /* reduced from 50px */
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       border-bottom: 1px solid #444;
       display: flex;
@@ -103,11 +103,11 @@
       transition: color 0.2s;
       opacity: 0.8;
     }
-    .nav-left a:hover { 
-      color: var(--primary); 
+    .nav-left a:hover {
+      color: var(--primary);
       opacity: 1;
     }
-    
+
     .btn-nav {
       color: var(--light);
       background: var(--primary);
@@ -125,8 +125,7 @@
     /* HERO */
     .hero {
       text-align: center;
-      /* == MODIFIED: Reduced padding == */
-      padding: 80px 20px 60px 20px; 
+      padding: 80px 15px 60px 15px; /* reduced from 20px */
       background: var(--light);
       border-bottom: 1px solid #e0e0e0;
       position: relative;
@@ -145,37 +144,32 @@
       background-position: center center;
       background-size: contain;
       opacity: 0.15;
-      z-index: 1; 
+      z-index: 1;
       pointer-events: none;
     }
 
-    .hero > * {
-        position: relative;
-        z-index: 2; 
-    }
+    .hero > * { position: relative; z-index: 2; }
 
     .hero-title-image {
-        max-width: 100%;
-        width: 900px;
-        height: auto;
-        margin-bottom: 15px; /* MODIFIED: Small gap */
-        margin-top: -20px;
+      max-width: 100%;
+      width: 900px;
+      height: auto;
+      margin-bottom: 15px;
+      margin-top: -20px;
+      margin-left: 100px;
     }
-
 
     .hero p {
-      font-size: 22px;
+      font-size: 27px;
       max-width: 750px;
-      /* == MODIFIED: Reduced margin == */
-      margin: 0 auto 20px; 
+      margin: 0 auto 20px;
       color: var(--text-dark);
     }
-    .hero > h1 { 
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 36px;
-        color: var(--text-dark);
-        /* == MODIFIED: Reduced margin == */
-        margin-top: 25px; 
+    .hero > h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 50px;
+      color: var(--text-dark);
+      margin-top: 25px;
     }
 
     .btn {
@@ -204,8 +198,7 @@
       display: flex;
       justify-content: center;
       gap: 25px;
-      /* == MODIFIED: Reduced margin == */
-      margin-top: 30px; 
+      margin-top: 30px;
       flex-wrap: wrap;
     }
     .countdown .unit {
@@ -226,29 +219,28 @@
     .prize {
       font-size: 28px;
       color: var(--text-dark);
-      /* == MODIFIED: Reduced margin == */
-      margin-top: 25px; 
+      margin-top: 25px;
       font-weight: 700;
     }
 
     /* SECTIONS */
     section {
-      padding: 80px 20px;
+      padding: 40px 8px; /* reduced from 40px 20px */
       max-width: 1000px;
       margin: 0 auto;
       text-align: center;
     }
     section h3 {
-      font-size: 38px;
-      margin-bottom: 24px;
+      font-size: 44px;
+      margin-bottom: 16px;
       color: var(--text-dark);
       text-transform: uppercase;
     }
     section p {
-      font-size: 18px;
+      font-size: 22px;
       color: var(--text-light);
       max-width: 800px;
-      margin: 0 auto 30px;
+      margin: 0 auto 20px;
       line-height: 1.7;
     }
 
@@ -256,13 +248,13 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
-      margin-top: 40px;
+      gap: 10px;
+      margin-top: 10px;
     }
     .theme-card {
       background: var(--light);
       border-radius: 15px;
-      flex-basis: 200px; 
+      flex-basis: 200px;
       flex-grow: 1;
       padding: 30px 20px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.05);
@@ -273,156 +265,78 @@
       transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0,0,0,0.1);
     }
-    .theme-card i { 
-      font-size: 40px; 
-      margin-bottom: 15px; 
-      color: var(--primary); 
+    .theme-card i {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: var(--primary);
     }
-    .theme-card h4 { font-size: 18px; font-weight: 600; color: var(--text-dark); }
-    
+    .theme-card h4 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
     /* FOOTER */
     footer {
       background: var(--dark);
       color: var(--light);
       text-align: center;
-      padding: 24px 20px;
+      padding: 24px 8px; /* reduced from 20px */
       font-size: 14px;
       letter-spacing: 0.5px;
     }
-    
-    /* NOTE */
+
     .note {
       font-style: italic;
       color: var(--text-light);
-      font-size: 17px;
+      font-size: 20px;
       margin-top: 20px;
     }
 
-    /* ================================================= */
-    /* == RESPONSIVE STYLES FOR MOBILE & TABLET == */
-    /* ================================================= */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
         align-items: center;
-        padding: 15px 20px;
+        padding: 15px 15px;
       }
-      .nsrit-logo-block {
-        margin-right: 0;
-        margin-bottom: 15px;
-      }
-      .nsrit-logo-block img {
-        width: 150px;
-      }
-      .nsrit-logo-block p {
-        font-size: 14px;
-      }
-      .college-info {
-          text-align: center;
-          margin-bottom: 0;
-      }
-      .college-name {
-        font-size: 20px;
-      }
-      .department-name {
-          font-size: 16px;
-      }
-
       nav {
         flex-direction: column;
         gap: 15px;
-        padding: 15px 20px;
+        padding: 15px;
       }
-      .nav-left {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px 15px;
-      }
-      .nav-left a {
-        margin-right: 0;
-      }
-      .btn-nav {
-        width: 100%;
-        text-align: center;
-      }
-
-      /* Hero */
-      .hero {
-        /* == MODIFIED: Reduced padding == */
-        padding: 50px 20px 40px 20px; 
-      }
-      .hero-title-image {
-          width: 300px;
-          margin-top: -10px;
-          margin-bottom: 10px; /* MODIFIED: Adjust for mobile */
-      }
-      .hero > h1 {
-        font-size: 28px;
-        margin-top: 20px; /* MODIFIED: Adjust for mobile */
-      }
-      .hero p {
-        font-size: 18px;
-        margin-bottom: 20px; /* MODIFIED: Adjust for mobile */
-      }
-
-      /* Countdown */
-      .countdown {
-        gap: 10px;
-        margin-top: 25px; /* MODIFIED: Adjust for mobile */
-      }
-      .countdown .unit {
-        padding: 12px 15px;
-        min-width: 70px;
-      }
-      .countdown .num {
-        font-size: 24px;
-      }
-      .prize {
-        font-size: 18px;
-        margin-top: 20px; /* MODIFIED: Adjust for mobile */
-      }
-
-      /* Sections */
-      section {
-        padding: 40px 20px;
-      }
-      section h3 {
-        font-size: 26px;
-      }
-      section p {
-        font-size: 16px;
-      }
-
-      /* Themes */
-      .theme-container {
-        gap: 15px;
-      }
-      .theme-card {
-        flex-basis: calc(50% - 7.5px); 
-        padding: 20px 10px;
-      }
-      .theme-card h4 {
-        font-size: 15px;
-      }
+      .hero { padding: 50px 10px 40px 10px; }
+      section { padding: 20px 10px; }
     }
+
+    #details .details-content {
+      text-align: left;
+      margin: 0 auto;
+      max-width: 650px;
+    }
+    #details h3 { text-align: center; }
+    #details .details-content .note {
+      margin-top: 18px;
+      font-style: italic;
+    }
+    p { font-size: larger; }
   </style>
-  <script src="https://kit.fontawesome.com/a2e0e9f6b3.js" crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/a2e0e9f6b3.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-  
+
   <header>
     <div class="nsrit-logo-block">
       <img src="https://universitykart.b-cdn.net/Content/upload/admin/dyriulco.bee.jpg" alt="NSRIT Logo">
-      <p>(Autonomous)</p>
+      <p style="font-weight: bolder; font-size: larger;">AUTONOMOUS</p>
     </div>
     <div class="college-info" style="text-align: center;">
-      <div class="college-name">
+      <div class="college-name" style="font-size:40px;">
         Nadimpalli Satyanarayana Raju Institute of Technology
       </div>
-      <p class="department-name" style="text-align: center;">Department of Electronics and Communication Engineering</p>
+      <p class="department-name" style="text-align: center;font-size: 30px;">Department of Electronics and Communication Engineering</p>
     </div>
-    </header>
+  </header>
 
   <nav>
     <div class="nav-left">
@@ -436,24 +350,23 @@
       <a href="#register" class="btn-nav">Register Now</a>
     </div>
   </nav>
-  
+
   <div class="hero">
     <img src="title_logo.png" alt="Inno Yudh 2K25" class="hero-title-image">
-    
-    <p>The Ultimate 24-Hour National Hackathon — Code, Create, Compete, and Conquer!</p>
-    <h1>Time Left for Abstract Submission</h1> 
-    <div class="countdown" id="countdown">
+    <p>The Ultimate 24-Hour National Level Hackathon — Code, Create, Compete, and Conquer!</p>
+    <h1>Time Left for Abstract Submission</h1>
+    <div class="countdown" id="countdown" aria-live="polite">
       <div class="unit"><div class="num" id="days">--</div><div class="label">Days</div></div>
       <div class="unit"><div class="num" id="hours">--</div><div class="label">Hours</div></div>
       <div class="unit"><div class="num" id="minutes">--</div><div class="label">Minutes</div></div>
       <div class="unit"><div class="num" id="seconds">--</div><div class="label">Seconds</div></div>
     </div>
-    <div class="prize"><i class="fas fa-trophy"></i> Prize Worth 50k+</div>
+    <div class="prize"><i class="fas fa-trophy"></i> Prize Worth upto 50k</div>
   </div>
 
   <section id="about">
     <h3>About Inno Yudh</h3>
-    <p>Inno Yudh 2K25 is a 24-hour national-level hackathon organized by the Department of ECE, NSRIT. It unites creative minds to solve real-world challenges using technology and innovation. Build, collaborate, and make an impact through your ideas!</p>
+    <p><strong>Inno Yudh 2K25</strong> is a 24-hour National Level Hackathon organized by the Department of ECE, NSRIT. It unites creative minds to solve real-world challenges using technology and innovation.<br>Build, collaborate, and make an impact through your ideas!</p>
     <p>Whether you're a coding wizard, a design guru, or a business strategist, Inno Yudh 2K25 welcomes all innovators to showcase their skills and compete for exciting prizes.</p>
   </section>
 
@@ -473,34 +386,35 @@
 
   <section id="rewards">
     <h3>Rewards</h3>
-    <p>You can win up to 50k+ worth prizes for your innovative solutions at Inno Yudh 2K25!</p>
+    <p>You can win up to <strong>50k worth prizes</strong> for your innovative solutions at <br><strong>Inno Yudh 2K25!</strong></p>
   </section>
 
   <section id="details">
     <h3>Event Details</h3>
-    <p><strong>Hackathon Dates:</strong> 12th and 13th December 2025</p>
-    <p><strong>Last Date for Abstract Submission:</strong> 20th November 2025</p>
-    <p><strong>Team Size:</strong> Minimum 2 members and Maximum 4 members</p>
-    <p><strong>Eligibility:</strong> Open to all Engineering students across various branches and colleges.</p>
-    <p class="note"><strong>Note:</strong> All team members should belong to the same college but can be from different branches.</p>
+    <div class="details-content">
+      <p><strong>Hackathon Dates:</strong> 12th and 13th December 2025</p>
+      <p><strong>Last Date for Abstract Submission:</strong> 20th November 2025</p>
+      <p><strong>Team Size:</strong> Minimum 2 members and Maximum 4 members</p>
+      <p><strong>Eligibility:</strong> Open to all Engineering students across various branches and colleges.</p>
+      <p class="note"><strong>Note:</strong> All team members should belong to the same college but can be from different branches.</p>
+    </div>
   </section>
 
   <section id="enquiry">
     <h3>Student Enquiry</h3>
-    <p style="font-weight: bold;">For any queries regarding participation, reach out to our coordinators:</p>
-    <p style="font-weight: bold;">Faculty Coordinators</p>
-    <p>Dr. K. Rajasekhar - +91 90106 63282</p>
-    <p>Dr. P. Hema Kumar - +91 94910 19268</p>
-    <p style="font-weight: bold;"> Student Coordinators</p>
-    <p>Mr. Md Adnan danish - +91 82526 03395</p>
+    <p><strong>For any queries regarding participation, reach out to our coordinators:</strong></p>
+    <p><strong>Faculty Coordinators</strong></p>
+    <p>Dr. K. Rajasekhar, Associate professor, ECE  - +91 90106 63282</p>
+    <p>Dr. P. Hema Kumar, Associate professor, ECE  - +91 94910 19268</p>
+    <p><strong>Student Coordinators</strong></p>
+    <p>Mr. Md Adnan Danish - +91 82526 03395</p>
     <p>Mr. L. Ganesh - +91 93473 26162</p>
-    
   </section>
 
   <section id="register">
     <h3>Register Your Team</h3>
-    <p>Gather your innovators, brainstorm your ideas, and join the battle of innovation at Inno Yudh 2K25!</p>
-   <a href="https://forms.gle/TSETPSimZBcPC5dp7" class="btn btn-primary" style="text-decoration: none;" target="_blank">Register Now</a>
+    <p>Gather your innovators, brainstorm your ideas, and join the battle of innovation at <strong>Inno Yudh 2K25!</strong></p>
+    <a href="https://forms.gle/TSETPSimZBcPC5dp7" class="btn btn-primary" style="text-decoration: none;" target="_blank" rel="noopener">Register Now</a>
   </section>
 
   <footer>
@@ -509,29 +423,29 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const startDate = new Date("2025-11-20T23:59:59").getTime();
+    const deadlineMs = Date.parse("2025-11-20T23:59:59");
     const dEl = document.getElementById('days');
     const hEl = document.getElementById('hours');
     const mEl = document.getElementById('minutes');
     const sEl = document.getElementById('seconds');
-
-    function updateCountdown() {
-      const now = new Date();
-      let diff = Math.floor((startDate - now) / 1000);
-      if (diff < 0) diff = 0;
-      const days = Math.floor(diff / 86400); diff %= 86400;
-      const hrs = Math.floor(diff / 3600); diff %= 3600;
-      const mins = Math.floor(diff / 60);
-      const secs = diff % 60;
-      dEl.textContent = days;
-      hEl.textContent = hrs;
-      mEl.textContent = mins;
-      sEl.textContent = secs;
+    let countdownInterval = null;
+    function pad(n){return n.toString().padStart(2,'0');}
+    function updateCountdown(){
+      const nowMs = Date.now();
+      let diffSec = Math.floor((deadlineMs - nowMs)/1000);
+      if(diffSec<=0){
+        dEl.textContent='0';hEl.textContent='00';mEl.textContent='00';sEl.textContent='00';
+        clearInterval(countdownInterval);return;
+      }
+      const days=Math.floor(diffSec/86400);diffSec%=86400;
+      const hours=Math.floor(diffSec/3600);diffSec%=3600;
+      const minutes=Math.floor(diffSec/60);const seconds=diffSec%60;
+      dEl.textContent=days;hEl.textContent=pad(hours);
+      mEl.textContent=pad(minutes);sEl.textContent=pad(seconds);
     }
+    countdownInterval=setInterval(updateCountdown,1000);
     updateCountdown();
-    setInterval(updateCountdown, 1000);
   </script>
+
 </body>
 </html>
-
-
